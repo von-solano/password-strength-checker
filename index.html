@@ -4,13 +4,22 @@
         <meta charset="UTF-8">
         <title>Real-time Password Strength Checker</title>
         <script src="/script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <h1>Check your password strength!</h1>
         <hr>
         <p>Test your password strength down below:</p>
-        <input type="password" id="passwordInput"> <!--input password-->
+        <input type="password" id="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <!--input password-->
         <input type="checkbox" onclick="togglePassword()">Show Password <!--displays password on tick-->
+
+        <div>
+            <h3>Password must contain the following:</h3>
+            <p>contains at least 8 characters</p>
+            <p>includes at least one number</p>
+            <p>includes uppercase and lowercase letters</p>
+            <p>at least one special character</p>
+        </div>
     </body>
 </html>
