@@ -8,18 +8,21 @@
     </head>
 
     <body>
-        <h1>Check your password strength!</h1>
+        <h1>Password Strength Checker</h1>
         <hr>
         <p>Test your password strength down below:</p>
         <input type="password" id="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <!--input password-->
         <input type="checkbox" onclick="togglePassword()">Show Password <!--displays password on tick-->
 
-        <div>
             <h3>Password must contain the following:</h3>
-            <p>contains at least 8 characters</p>
-            <p>includes at least one number</p>
-            <p>includes uppercase and lowercase letters</p>
-            <p>at least one special character</p>
-        </div>
+            <ul class="centered-list">
+                <li class="invalid">includes a lowercase letter</li>
+                <li class="invalid">includes an uppercase letter</li>
+                <li class="invalid">contains at least 8 characters</li>
+                <li class="invalid">includes at least one number</li>
+                <li class="invalid">at least one special character</li>
+            </ul>
+
+
     </body>
 </html>

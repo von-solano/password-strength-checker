@@ -1,1 +1,23 @@
-h1 { font-family:'Raleway', sans-serif; }
+h1 { 
+    font-family:'Raleway', sans-serif; 
+    text-align: center;
+}
+
+body {
+    text-align: center;
+}
+
+.centered-list {
+    text-align: center;
+    list-style-position: inside;
+}
+
+/* make text colour green when requirement is checked */
+.valid {
+    color: green;
+}
+
+/* make text colour red when requirement is NOT met */
+.invalid {
+    color: red;
+}
