@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Real-time Password Strength Checker</title>
-        <script src="/script.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
-        <h1>Password Strength Checker</h1>
-        <hr>
-        <p>Test your password strength down below:</p>
-        <input type="password" id="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <!--input password-->
-        <input type="checkbox" onclick="togglePassword()">Show Password <!--displays password on tick-->
+<head>
+    <meta charset="UTF-8">
+    <title>Password Strength Checker</title>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-box">
+            <h3>Test your password strength: </h3>
+            <input type="password" id="passwordInput" placeholder="Password"> <!--input password-->
+            <input type="checkbox" onclick="togglePassword()">Show Password <!--displays password on tick-->
 
             <h3>Password must contain the following:</h3>
             <ul class="centered-list">
@@ -22,7 +23,14 @@
                 <li class="invalid">includes at least one number</li>
                 <li class="invalid">at least one special character</li>
             </ul>
+            <p>
+                <em>Disclaimer:</em> We do NOT store your passwords! <br>
+                Even if we did, we have no idea who you are what account it is linked to so your safety is ensured!
+            </p>
+        </div>
 
+    </div>
 
-    </body>
+</body>
+
 </html>

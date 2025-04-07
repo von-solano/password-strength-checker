@@ -2,11 +2,11 @@
 A real-time password strength checker with clean UI design... Built with HTML, CSS, and JS!
 
 ## Features
+- Button to toggle password visibility DONE
 - Real-time feedback
-- Visual Strength Bar
+- Visual password strength Bar
 - Colour-coded results
 - Tips on increasing password strength
-- Button to toggle password visibility DONE
 - Regex Rules:
     - contains at least eight characters
     - includes at least one number
