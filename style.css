@@ -14,3 +14,19 @@
     border: 2px solid black;
     border-radius: 12px;        /* for soft input box corner */
 }
+
+#meter_container {
+    margin-top: 15px;
+    background-color: white;
+    width: 300px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;           /* ensure strength meter does NOT exceed container */
+}
+
+#strength_meter {
+    width: 0%;
+    height: 100%;
+    transition: width 2s ease; /* transition speed for strength bar */
+}
