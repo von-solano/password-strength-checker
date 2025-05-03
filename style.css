@@ -1,0 +1,16 @@
+#page_container {
+    background-color: white;
+    display: flex;
+    justify-content: center;    /* vertically center page */
+    align-items: center;        /* horizontally center page */
+    flex-direction: column;     /* stack child elements vertically */
+    height: 80vh;               /* take up 80% of screen height */
+}
+
+#input_container {
+    background-color: grey;
+    box-sizing: border-box;     /* include padding and border sizing */
+    padding: 2em;               /* create input box */
+    border: 2px solid black;
+    border-radius: 12px;        /* for soft input box corner */
+}
