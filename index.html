@@ -17,7 +17,7 @@
     <div id="page_container">
         <h2>Password Strength Checker</h2>
         <div id="input_container"> <!-- where the user inputs the password to check its strength -->
-            <input type="password" id="password" value="Password"> <!-- input password -->
+            <input type="password" id="password" value="type a password..." oninput="score_password()"> <!-- input password. oninput score the password -->
             <button type="button" id="visibility_button" onclick="toggle_visibility()" >Show</button> <!-- button to toggle password visibility -->
         </div>
         <div id="meter_container"> <!-- container for the password strength meter -->

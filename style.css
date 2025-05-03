@@ -57,6 +57,21 @@
     transition: width 2s ease;   /* transition speed for strength bar */
 }
 
+#strength_meter.weak {
+    width: 33%;
+    background-color: red;
+}
+
+#strength_meter.moderate {
+    width: 67%;
+    background-color: yellow;
+}
+
+#strength_meter.strong {
+    width: 100%;
+    background-color: lightgreen;
+}
+
 h2 {
     font-family: "Inter", sans-serif; /* backup font sans-serif */
     font-weight: 500;
