@@ -17,6 +17,7 @@
 
 /* style password input box */
 #password {
+    font-family: "Inter", sans-serif;
     width: 200px;
     height: 30px;
     border: 2px solid lightgray;
@@ -24,12 +25,21 @@
 }
 
 /* style password visibility button */
-#toggle_visibility {
+#visibility_button {
+    font-family: "Inter", sans-serif;
     width: 50px;
     height: 25px;
     border: none;
     border-radius: 5px;
     margin-left: 20px;
+    transition-duration: 0.5s;  /* transition for hover */
+    cursor: pointer;            /* swap cursor to pointer */
+    background-color: white;
+}
+
+/* colour button when hovered over with cursor */
+#visibility_button:hover {
+    background-color: lightgrey;
 }
 
 #meter_container {
