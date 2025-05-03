@@ -15,10 +15,27 @@
     border-radius: 12px;        /* for soft input box corner */
 }
 
+/* style password input box */
+#password {
+    width: 200px;
+    height: 30px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+/* style password visibility button */
+#toggle_visibility {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
 #meter_container {
     margin-top: 15px;
     background-color: white;
-    width: 300px;
+    width: 350px;
     height: 20px;
     border: 2px solid black;
     border-radius: 10px;
@@ -26,7 +43,6 @@
 }
 
 #strength_meter {
-    width: 0%;
     height: 100%;
     transition: width 2s ease;   /* transition speed for strength bar */
 }
