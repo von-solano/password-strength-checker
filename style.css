@@ -108,7 +108,8 @@
     font-family: "Inter", sans-serif;
     font-style: italic;
     font-size: small;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 #strength_text {
@@ -135,9 +136,9 @@
     border: 2px solid black;
     border-radius: 12px;
     box-sizing: border-box;
-    padding: 1.5em;
+    padding: 1em;
     box-shadow: 0 0 5px black;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 /* creating tooltips */
@@ -173,10 +174,19 @@
     transform: translateX(-50%) translateY(0); /* slide tooltip up */
 }
 
+#hover_instructions {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 10px;
+}
+
 
 h2, h4 {
     font-family: "Inter", sans-serif; /* backup font sans-serif */
     font-weight: 500;
+    margin-top: 5px;
 }
 
 p {
