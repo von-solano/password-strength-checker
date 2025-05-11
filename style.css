@@ -24,12 +24,13 @@
     border: 2px solid lightgray;
     border-radius: 10px;
     padding-left: 10px;
+    /* transitions for border colours based on password strength */
     transition: border-color 0.5s ease, border-width 1s ease, box-shadow 0.5s ease;
 }
 
 /* when clicking on password input box */
 #password:focus {
-    outline: none;
+    outline: none; /* remove blue outline */
 }
 
 /* style password visibility button */
@@ -45,7 +46,7 @@
     background-color: white;
 }
 
-/* colour button when hovered over with cursor */
+/* colour button border when hovered over with cursor */
 #visibility_button:hover {
     border: 2px solid #4d90fe;
     box-shadow: 0 0 5px #4d90fe;
@@ -64,16 +65,19 @@
     transition: border-color 0.5s ease, border-width 0.5s ease;
 }
 
+/* if password is weak */
 #meter_container.weak, #password.weak {
     border: 2px solid #ff4d4d;
     box-shadow: 0 0 8px #ff4d4d;
 }
 
+/* if password is moderate */
 #meter_container.moderate, #password.moderate {
     border: 2px solid #ff9900;
     box-shadow: 0 0 8px #ff9900;
 }
 
+/* if password is strong */
 #meter_container.strong, #password.strong {
     border: 2px solid #33cc33;
     box-shadow: 0 0 8px #33cc33;
@@ -91,6 +95,7 @@
     background-color: white;
 }
 
+/* if password is weak, moderate, or strong */
 #strength_meter.weak {
     width: 33%;
     background-color: #ff4d4d;
@@ -106,7 +111,7 @@
     background-color: #33cc33;
 }
 
-#disclaimer {
+footer {
     font-family: "Inter", sans-serif;
     font-style: italic;
     font-size: small;
@@ -134,6 +139,7 @@
     color: #33cc33;
 }
 
+/* styling tips container */
 #tips_container {
     border: 2px solid black;
     border-radius: 12px;
@@ -155,9 +161,10 @@
     background-color: #333333;
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     border-radius: 8px;
     font-size: 12px;
+    line-height: 1.5;
 
     position: absolute;
     z-index: 1; /* place tool tip in front of other elements */

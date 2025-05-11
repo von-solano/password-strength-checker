@@ -2,10 +2,9 @@
 const password_input = document.getElementById("password"); // password input
 const strength_meter = document.getElementById("strength_meter"); // strength meter
 const strength_text = document.getElementById("strength_text"); // text describing password strength
-const meter_box = document.getElementById("meter_container") // box surrounding strength meter
+const meter_box = document.getElementById("meter_container"); // box surrounding strength meter
 const toggle_button = document.getElementById("visibility_button"); // get button element 
 const feedback = document.getElementById("feedback"); // text giving real-time password feedback
-
 
 // REGEX patterns
 const lowercase = /[a-z]/;
@@ -36,7 +35,7 @@ function score_password() {
 
     // check if password contains common/weak patterns
     if (common_passwords.some(bad => password_lower.includes(bad))) {
-        return score = 0; // password is common, return lowest score
+        return 0; // password is common, return lowest score
     }
 
     // test password length
@@ -45,11 +44,10 @@ function score_password() {
     } else if (password.length >= 8) {
         score++; // +1 point for 8 characters
     } else {
-        return score = 0; // password is too short, return lowest score
+        return 0; // password is too short, return lowest score
     }
 
-    // test password inputs: 
-    // checks character variety
+    // test password inputs: checks character variety
     if (uppercase.test(password)) score++;
     if (lowercase.test(password)) score++;
     if (numbers.test(password)) score++;
