@@ -34,20 +34,21 @@
 /* style password visibility button */
 #visibility_button {
     font-family: "Inter", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     width: 50px;
     height: 30px;
     border: none;
     border-radius: 5px;
     margin-left: 20px;
-    transition-duration: 0.5s;  /* transition for hover */
     cursor: pointer;            /* swap cursor to pointer */
     background-color: white;
 }
 
 /* colour button when hovered over with cursor */
 #visibility_button:hover {
-    background-color: lightgrey;
+    border: 2px solid #4d90fe;
+    box-shadow: 0 0 5px #4d90fe;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #meter_container {
@@ -63,17 +64,17 @@
 
 #meter_container.weak, #password.weak {
     border: 2px solid #ff4d4d;
-    box-shadow: 0 0 10px #ff4d4d;
+    box-shadow: 0 0 8px #ff4d4d;
 }
 
 #meter_container.moderate, #password.moderate {
     border: 2px solid #ff9900;
-    box-shadow: 0 0 10px #ff9900;
+    box-shadow: 0 0 8px #ff9900;
 }
 
 #meter_container.strong, #password.strong {
     border: 2px solid #33cc33;
-    box-shadow: 0 0 10px #33cc33;
+    box-shadow: 0 0 8px #33cc33;
 }
 
 #strength_meter {
@@ -103,15 +104,11 @@
     background-color: #33cc33;
 }
 
-h2 {
-    font-family: "Inter", sans-serif; /* backup font sans-serif */
-    font-weight: 500;
-}
-
 #disclaimer {
     font-family: "Inter", sans-serif;
     font-style: italic;
     font-size: small;
+    margin-top: 20px;
 }
 
 #strength_text {
@@ -132,5 +129,75 @@ h2 {
 
 #strength_text.strong {
     color: #33cc33;
+}
+
+#tips_container {
+    border: 2px solid black;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 1.5em;
+    box-shadow: 0 0 5px black;
+    margin-top: 8px;
+}
+
+/* creating tooltips */
+.tooltip {
+    position: relative;
+    display: block;
+}
+
+.tooltip .tooltip_text {
+    visibility: hidden; /* hide tooltip */
+    width: 200px;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 12px;
+
+    position: absolute;
+    z-index: 1; /* place tool tip in front of other elements */
+    bottom: 125%;
+    left: 75%;
+
+    /* tooltip transitions*/
+    opacity: 0; 
+    transform: translateX(-50%) translateY(10px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.tooltip:hover .tooltip_text {
+    visibility: visible; /* show tooltip */
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* slide tooltip up */
+}
+
+
+h2, h4 {
+    font-family: "Inter", sans-serif; /* backup font sans-serif */
+    font-weight: 500;
+}
+
+p {
+    font-family: "Inter", sans-serif; /* backup font sans-serif */
+    font-size: small;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+li {
+    font-family: "Inter", sans-serif; /* backup font sans-serif */
+    font-size: smaller;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+li:hover{
+    cursor: help;
 }
 

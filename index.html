@@ -9,7 +9,9 @@
     <!-- include 'inter' google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -17,8 +19,10 @@
     <div id="page_container">
         <h2>Password Strength Checker</h2>
         <div id="input_container"> <!-- where the user inputs the password to check its strength -->
-            <input type="password" id="password" placeholder="type a password..." oninput="let s = score_password(); update_meter(s)" > <!-- input password. oninput score the password -->
-            <button type="button" id="visibility_button" onclick="toggle_visibility()" >Show</button> <!-- button to toggle password visibility -->
+            <input type="password" id="password" placeholder="type a password..."
+                oninput="let s = score_password(); update_meter(s)"> <!-- input password. oninput score the password -->
+            <button type="button" id="visibility_button" onclick="toggle_visibility()">Show</button>
+            <!-- button to toggle password visibility -->
         </div>
         <div id="password_strength_container">
             <div id="strength_text"></div>
@@ -26,8 +30,35 @@
                 <div id="strength_meter"></div>
             </div>
         </div>
-            <!-- privacy notes -->
-            <p id="disclaimer">Passwords are NEVER stored!</p>
+        <!-- privacy notes -->
+        <p id="disclaimer">Passwords are NEVER stored!</p>
+
+        <!-- how to make better passwords notes -->
+        <div id="tips_container">
+            <h4>How To Create A Strong Password?</h4>
+            <p>include the following...</p>
+            <ul>
+                <li class="tooltip">12+ Characters
+                    <span class="tooltip_text">Longer passwords are harder to crack through brute-force or dictionary attacks!</span>
+                </li>
+                <li class="tooltip">Uppercase Letters
+                    <span class="tooltip_text">Including uppercase letters increases password complexity!</span>
+                </li>
+                <li class="tooltip">Lowercase Letters
+                    <span class="tooltip_text">Diversity of uppercase and lowercase letters increases password strength!</span>
+                </li>
+                <li class="tooltip">Special Characters
+                    <span class="tooltip_text">Symbols like @, #, % make decreases predictability of passwords!</span>
+                </li>
+                <li class="tooltip">Numbers
+                    <span class="tooltip_text">Mixing numbers and letters increases password security!</span>
+                </li>
+                <li class="tooltip">NO Common Passwords!
+                    <span class="tooltip_text">Do NOT use common passwords such as "Password123" or "qwerty" etc...</span>
+                </li>
+            </ul>
+            <p><em><b>Hover for more information!</b></em></p>
+        </div>
     </div>
     <script src="script.js" defer></script> <!-- link to external JS file -->
 </body>
