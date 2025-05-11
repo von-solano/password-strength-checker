@@ -69,7 +69,7 @@ function give_feedback() {
 
     // check if password contains common/weak patterns
     if (common_passwords.some(bad => password_lower.includes(bad))) {
-        feedback.textContent = "Password contains COMMONLY USED password!";
+        feedback.textContent = "Password contains a COMMONLY USED password!";
 
     // test password length and character variety
     } else if (password.length < 12) {
@@ -83,7 +83,7 @@ function give_feedback() {
     } else if (!special_chars.test(password)) {
         feedback.textContent = "Include a SPECIAL character!";
     } else if (password.length > 0) {
-        feedback.textContent = "Looks GOOD!";
+        feedback.textContent = "Amazing!";
     }
 }
 
