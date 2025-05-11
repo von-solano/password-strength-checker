@@ -43,7 +43,7 @@
 }
 
 #meter_container {
-    margin-top: 15px;
+    margin-top: 5px;
     background-color: white;
     width: 350px;
     height: 20px;
@@ -83,3 +83,22 @@ h2 {
     font-style: italic;
     font-size: small;
 }
+
+#strength_text {
+    font-family: "Inter", sans-serif;
+    font-size: smaller;
+    margin-top: 10px;
+}
+
+#strength_text.weak {
+    color: #ff4d4d;
+}
+
+#strength_text.moderate {
+    color: #ff9900;
+}
+
+#strength_text.strong {
+    color: #33cc33;
+}
+

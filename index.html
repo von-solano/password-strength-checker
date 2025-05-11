@@ -20,10 +20,12 @@
             <input type="password" id="password" value="type a password..." oninput="let s = score_password(); update_meter(s)" > <!-- input password. oninput score the password -->
             <button type="button" id="visibility_button" onclick="toggle_visibility()" >Show</button> <!-- button to toggle password visibility -->
         </div>
-        <div id="meter_container"> <!-- container for the password strength meter -->
-            <div id="strength_meter"></div>
+        <div id="password_strength_container">
+            <div id="strength_text"></div>
+            <div id="meter_container"> <!-- container for the password strength meter -->
+                <div id="strength_meter"></div>
+            </div>
         </div>
-
         <div id="disclaimer"> <!-- privacy notes -->
             <p>Passwords are NEVER stored!</p>
         </div>
