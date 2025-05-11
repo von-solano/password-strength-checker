@@ -53,23 +53,24 @@
 }
 
 #strength_meter {
+    width: 0%;
     height: 100%;
-    transition: width 2s ease;   /* transition speed for strength bar */
+    transition: width 1s ease;   /* transition speed for strength bar */
 }
 
 #strength_meter.weak {
     width: 33%;
-    background-color: red;
+    background-color: #ff4d4d;
 }
 
 #strength_meter.moderate {
-    width: 67%;
-    background-color: yellow;
+    width: 66%;
+    background-color: #ff9900;
 }
 
 #strength_meter.strong {
     width: 100%;
-    background-color: lightgreen;
+    background-color: #33cc33;
 }
 
 h2 {
