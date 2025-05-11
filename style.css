@@ -8,7 +8,7 @@
 }
 
 #input_container {
-    background-color: grey;
+    background-color: #333333;
     box-sizing: border-box;     /* include padding and border sizing */
     padding: 2em;               /* create input box */
     border: 2px solid black;
@@ -24,11 +24,16 @@
     border-radius: 10px;
 }
 
+#password:focus {
+    background-color: lightgrey9;
+}
+
 /* style password visibility button */
 #visibility_button {
     font-family: "Inter", sans-serif;
+    font-size: 14px;
     width: 50px;
-    height: 25px;
+    height: 30px;
     border: none;
     border-radius: 5px;
     margin-left: 20px;
@@ -55,7 +60,13 @@
 #strength_meter {
     width: 0%;
     height: 100%;
-    transition: width 1s ease;   /* transition speed for strength bar */
+    transition: width 0.5s ease, background-color 0.5s ease;   /* transition speed for strength bar */
+}
+
+/* if password input is empty */
+#strength_meter.empty {
+    width: 0%;
+    background-color: white;
 }
 
 #strength_meter.weak {
@@ -86,8 +97,10 @@ h2 {
 
 #strength_text {
     font-family: "Inter", sans-serif;
-    font-size: smaller;
+    font-size: 15px;
     margin-top: 10px;
+    margin-bottom: 5px;
+    transition: color 0.5s ease;  /* transition speed for text colour */
 }
 
 #strength_text.weak {

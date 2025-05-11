@@ -55,18 +55,27 @@ function score_password() {
 
 // function to update strength bar based on score
 function update_meter(score) {
+    const password_input = document.getElementById("password");
     let strength_meter = document.getElementById("strength_meter");
     let strength_text = document.getElementById("strength_text");
-    strength_meter.className = ""; // reset class 
+
+    // reset classes
+    strength_meter.className = "";
     strength_text.className = "";
 
+    // if no password input
+    if(password_input.value.length === 0){
+        strength_meter.classList.add("empty");
+        strength_text.textContent = "";
+        return;
+    }
 
     // update bar based on score
     if (score >= 6) {
         strength_meter.classList.add("strong")
         strength_text.classList.add("strong")
         strength_text.textContent = "Strength: Strong"
-    } else if (score == 5) {
+    } else if (score === 5) {
         strength_meter.classList.add("moderate")
         strength_text.classList.add("moderate")
         strength_text.textContent = "Strength: Moderate"
