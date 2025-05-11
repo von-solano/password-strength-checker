@@ -22,10 +22,28 @@
     height: 30px;
     border: 2px solid lightgray;
     border-radius: 10px;
+    padding-left: 10px;
+    transition: border-color 0.5s ease, border-width 1s ease;
 }
 
+#password.weak {
+    border: 2px solid #ff4d4d;
+    box-shadow: 0 0 10px #ff4d4d;
+}
+
+#password.moderate {
+    border: 2px solid #ff9900;
+    box-shadow: 0 0 10px #ff9900;
+}
+
+#password.strong {
+    border: 2px solid #33cc33;
+    box-shadow: 0 0 10px #33cc33;
+}
+
+/* when clicking on password input box */
 #password:focus {
-    background-color: lightgrey9;
+    outline: none;
 }
 
 /* style password visibility button */
@@ -48,13 +66,29 @@
 }
 
 #meter_container {
-    margin-top: 5px;
+    margin-top: 10px;
     background-color: white;
     width: 350px;
     height: 20px;
     border: 2px solid black;
     border-radius: 10px;
     overflow: hidden;           /* ensure strength meter does NOT exceed container */
+    transition: border-color 0.5s ease, border-width 0.5s ease;
+}
+
+#meter_container.weak {
+    border: 2px solid #ff4d4d;
+    box-shadow: 0 0 10px #ff4d4d;
+}
+
+#meter_container.moderate {
+    border: 2px solid #ff9900;
+    box-shadow: 0 0 10px #ff9900;
+}
+
+#meter_container.strong {
+    border: 2px solid #33cc33;
+    box-shadow: 0 0 10px #33cc33;
 }
 
 #strength_meter {

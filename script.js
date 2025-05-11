@@ -58,10 +58,14 @@ function update_meter(score) {
     const password_input = document.getElementById("password");
     let strength_meter = document.getElementById("strength_meter");
     let strength_text = document.getElementById("strength_text");
+    let meter_box = document.getElementById("meter_container")
+    let password_box = document.getElementById("password");
 
     // reset classes
     strength_meter.className = "";
     strength_text.className = "";
+    password_box.className = "";
+    meter_box.className = "";
 
     // if no password input
     if(password_input.value.length === 0){
@@ -74,14 +78,20 @@ function update_meter(score) {
     if (score >= 6) {
         strength_meter.classList.add("strong")
         strength_text.classList.add("strong")
+        password_box.classList.add("strong");
+        meter_box.classList.add("strong");
         strength_text.textContent = "Strength: Strong"
     } else if (score === 5) {
         strength_meter.classList.add("moderate")
         strength_text.classList.add("moderate")
+        password_box.classList.add("moderate");
+        meter_box.classList.add("moderate");
         strength_text.textContent = "Strength: Moderate"
     } else {
         strength_meter.classList.add("weak")
         strength_text.classList.add("weak")
+        password_box.classList.add("weak");
+        meter_box.classList.add("weak");
         strength_text.textContent = "Strength: Weak"
 
     }
