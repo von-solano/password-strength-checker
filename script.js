@@ -1,15 +1,24 @@
-// regular expressions for password char types
-let lowercase = /[a-z]/;
-let uppercase = /[A-Z]/;
-let numbers = /[0-9]/;
-let special_chars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+// global variables to important DOM elements
+const password_input = document.getElementById("password"); // password input
+const strength_meter = document.getElementById("strength_meter"); // strength meter
+const strength_text = document.getElementById("strength_text"); // text describing password strength
+const meter_box = document.getElementById("meter_container") // box surrounding strength meter
+const toggle_button = document.getElementById("visibility_button"); // get button element 
+const feedback = document.getElementById("feedback"); // text giving real-time password feedback
+
+
+// REGEX patterns
+const lowercase = /[a-z]/;
+const uppercase = /[A-Z]/;
+const numbers = /[0-9]/;
+const special_chars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+
+// array of common passwords
+const common_passwords = ["password", "password123", "12345678", "123456789", "qwerty", "qwerty1", "qwerty123", "abc123", "11111111", "123123123", "guest", "secret"];
 
 
 // function to toggle password visibility onclick()
 function toggle_visibility() {
-    const password_input = document.getElementById("password"); // get password element
-    const toggle_button = document.getElementById("visibility_button"); // get button element 
-
     if (password_input.type === "password") {
         password_input.type = "text";       // swap input type to text (shows password)
         toggle_button.textContent = "Hide"; // swap text on button to "Hide"
@@ -21,12 +30,8 @@ function toggle_visibility() {
 
 // function to score password strength
 function score_password() {
-    const password_input = document.getElementById("password"); // get password element
-    const password = password_input.value; // value of password
     let score = 0; // score variable
-
-    // create array of common/weak passwords
-    const common_passwords = ["password", "password123", "12345678", "123456789", "qwerty", "qwerty1", "qwerty123", "abc123", "11111111", "123123123", "guest", "secret"];
+    const password = password_input.value; // values inside the password
     const password_lower = password.toLowerCase(); // turn password to lowercase
 
     // check if password contains common/weak patterns
@@ -55,14 +60,10 @@ function score_password() {
 
 // function to give real-time password feedback
 function give_feedback() {
-    const password_input = document.getElementById("password");
-    const password = password_input.value;
-    const feedback = document.getElementById("feedback");
-
-    // create array of common/weak passwords
-    const common_passwords = ["password", "password123", "12345678", "123456789", "qwerty", "qwerty1", "qwerty123", "abc123", "11111111", "123123123", "guest", "secret"];
+    const password = password_input.value; // values inside the password
     const password_lower = password.toLowerCase(); // turn password to lowercase
 
+    // if nothing in password return no feedback
     if(password.length === 0){
         feedback.textContent = "";
         return;
@@ -88,19 +89,12 @@ function give_feedback() {
     }
 }
 
-
 // function to update strength bar based on score
 function update_meter(score) {
-    const password_input = document.getElementById("password");
-    let strength_meter = document.getElementById("strength_meter");
-    let strength_text = document.getElementById("strength_text");
-    let meter_box = document.getElementById("meter_container")
-    let password_box = document.getElementById("password");
-
     // reset classes
     strength_meter.className = "";
     strength_text.className = "";
-    password_box.className = "";
+    password_input.className = "";
     meter_box.className = "";
 
     // if no password input
@@ -114,19 +108,19 @@ function update_meter(score) {
     if (score >= 6) {
         strength_meter.classList.add("strong")
         strength_text.classList.add("strong")
-        password_box.classList.add("strong");
+        password_input.classList.add("strong");
         meter_box.classList.add("strong");
         strength_text.textContent = "Strength: Strong"
     } else if (score === 5) {
         strength_meter.classList.add("moderate")
         strength_text.classList.add("moderate")
-        password_box.classList.add("moderate");
+        password_input.classList.add("moderate");
         meter_box.classList.add("moderate");
         strength_text.textContent = "Strength: Moderate"
     } else {
         strength_meter.classList.add("weak")
         strength_text.classList.add("weak")
-        password_box.classList.add("weak");
+        password_input.classList.add("weak");
         meter_box.classList.add("weak");
         strength_text.textContent = "Strength: Weak"
 
