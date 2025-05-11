@@ -13,6 +13,7 @@
     padding: 2em;               /* create input box */
     border: 2px solid black;
     border-radius: 12px;        /* for soft input box corner */
+    margin-bottom: 8px;
 }
 
 /* style password input box */
@@ -23,7 +24,7 @@
     border: 2px solid lightgray;
     border-radius: 10px;
     padding-left: 10px;
-    transition: border-color 0.5s ease, border-width 1s ease;
+    transition: border-color 0.5s ease, border-width 1s ease, box-shadow 0.5s ease;
 }
 
 /* when clicking on password input box */
@@ -53,6 +54,7 @@
 
 #meter_container {
     margin-top: 10px;
+    margin-bottom: 10px;
     background-color: white;
     width: 350px;
     height: 20px;
@@ -80,7 +82,7 @@
 #strength_meter {
     width: 0%;
     height: 100%;
-    transition: width 0.5s ease, background-color 0.5s ease;   /* transition speed for strength bar */
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;   /* transition speed for strength bar */
 }
 
 /* if password input is empty */
@@ -109,13 +111,13 @@
     font-style: italic;
     font-size: small;
     margin-top: 30px;
-    margin-bottom: 20px;
 }
 
 #strength_text {
     font-family: "Inter", sans-serif;
     font-size: 15px;
-    margin-top: 10px;
+    font-weight: 500;
+    margin-top: 8px;
     margin-bottom: 5px;
     transition: color 0.5s ease;  /* transition speed for text colour */
 }
@@ -211,3 +213,6 @@ li:hover{
     cursor: help;
 }
 
+#feedback {
+    font-weight: 500;
+}

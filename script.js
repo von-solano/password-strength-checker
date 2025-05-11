@@ -53,6 +53,42 @@ function score_password() {
     return score;
 }
 
+// function to give real-time password feedback
+function give_feedback() {
+    const password_input = document.getElementById("password");
+    const password = password_input.value;
+    const feedback = document.getElementById("feedback");
+
+    // create array of common/weak passwords
+    const common_passwords = ["password", "password123", "12345678", "123456789", "qwerty", "qwerty1", "qwerty123", "abc123", "11111111", "123123123", "guest", "secret"];
+    const password_lower = password.toLowerCase(); // turn password to lowercase
+
+    if(password.length === 0){
+        feedback.textContent = "";
+        return;
+    }
+
+    // check if password contains common/weak patterns
+    if (common_passwords.some(bad => password_lower.includes(bad))) {
+        feedback.textContent = "Password contains COMMONLY USED password!";
+
+    // test password length and character variety
+    } else if (password.length < 12) {
+        feedback.textContent = "Increase the NUMBER of CHARACTERS!";
+    } else if (!uppercase.test(password)) {
+        feedback.textContent = "Include an UPPERCASE letter!";
+    } else if (!lowercase.test(password)) {
+        feedback.textContent = "Include a LOWERCASE letter!";
+    } else if (!numbers.test(password)) {
+        feedback.textContent = "Include some NUMBERS!";
+    } else if (!special_chars.test(password)) {
+        feedback.textContent = "Include a SPECIAL character!";
+    } else if (password.length > 0) {
+        feedback.textContent = "Looks GOOD!";
+    }
+}
+
+
 // function to update strength bar based on score
 function update_meter(score) {
     const password_input = document.getElementById("password");
@@ -68,7 +104,7 @@ function update_meter(score) {
     meter_box.className = "";
 
     // if no password input
-    if(password_input.value.length === 0){
+    if (password_input.value.length === 0) {
         strength_meter.classList.add("empty");
         strength_text.textContent = "";
         return;
@@ -95,4 +131,11 @@ function update_meter(score) {
         strength_text.textContent = "Strength: Weak"
 
     }
+}
+
+// function to evaluate password
+function evaluate_password() {
+    let score = score_password();
+    update_meter(score);
+    give_feedback();
 }
