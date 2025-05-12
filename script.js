@@ -62,7 +62,7 @@ function give_feedback() {
     const password_lower = password.toLowerCase(); // turn password to lowercase
 
     // if nothing in password return no feedback
-    if(password.length === 0){
+    if (password.length === 0) {
         feedback.textContent = "";
         return;
     }
@@ -71,7 +71,7 @@ function give_feedback() {
     if (common_passwords.some(bad => password_lower.includes(bad))) {
         feedback.textContent = "Password contains a COMMONLY USED password!";
 
-    // test password length and character variety
+        // test password length and character variety
     } else if (password.length < 12) {
         feedback.textContent = "Increase the NUMBER of CHARACTERS!";
     } else if (!uppercase.test(password)) {

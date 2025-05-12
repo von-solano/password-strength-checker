@@ -1,18 +1,26 @@
 #page_container {
     background-color: white;
     display: flex;
-    justify-content: center;    /* vertically center page */
-    align-items: center;        /* horizontally center page */
-    flex-direction: column;     /* stack child elements vertically */
-    height: 80vh;               /* take up 80% of screen height */
+    justify-content: center;
+    /* vertically center page */
+    align-items: center;
+    /* horizontally center page */
+    flex-direction: column;
+    /* stack child elements vertically */
+    height: 80vh;
+    /* take up 80% of screen height */
+    margin-top: 80px;
 }
 
 #input_container {
     background-color: #333333;
-    box-sizing: border-box;     /* include padding and border sizing */
-    padding: 2em;               /* create input box */
+    box-sizing: border-box;
+    /* include padding and border sizing */
+    padding: 2em;
+    /* create input box */
     border: 2px solid black;
-    border-radius: 12px;        /* for soft input box corner */
+    border-radius: 12px;
+    /* for soft input box corner */
     margin-bottom: 8px;
 }
 
@@ -30,7 +38,8 @@
 
 /* when clicking on password input box */
 #password:focus {
-    outline: none; /* remove blue outline */
+    outline: none;
+    /* remove blue outline */
 }
 
 /* style password visibility button */
@@ -42,7 +51,8 @@
     border: none;
     border-radius: 5px;
     margin-left: 20px;
-    cursor: pointer;            /* swap cursor to pointer */
+    cursor: pointer;
+    /* swap cursor to pointer */
     background-color: white;
 }
 
@@ -61,24 +71,28 @@
     height: 20px;
     border: 2px solid black;
     border-radius: 10px;
-    overflow: hidden;           /* ensure strength meter does NOT exceed container */
+    overflow: hidden;
+    /* ensure strength meter does NOT exceed container */
     transition: border-color 0.5s ease, border-width 0.5s ease;
 }
 
 /* if password is weak */
-#meter_container.weak, #password.weak {
+#meter_container.weak,
+#password.weak {
     border: 2px solid #ff4d4d;
     box-shadow: 0 0 8px #ff4d4d;
 }
 
 /* if password is moderate */
-#meter_container.moderate, #password.moderate {
+#meter_container.moderate,
+#password.moderate {
     border: 2px solid #ff9900;
     box-shadow: 0 0 8px #ff9900;
 }
 
 /* if password is strong */
-#meter_container.strong, #password.strong {
+#meter_container.strong,
+#password.strong {
     border: 2px solid #33cc33;
     box-shadow: 0 0 8px #33cc33;
 }
@@ -86,7 +100,8 @@
 #strength_meter {
     width: 0%;
     height: 100%;
-    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;   /* transition speed for strength bar */
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    /* transition speed for strength bar */
 }
 
 /* if password input is empty */
@@ -124,7 +139,8 @@ footer {
     font-weight: 500;
     margin-top: 8px;
     margin-bottom: 5px;
-    transition: color 0.5s ease;  /* transition speed for text colour */
+    transition: color 0.5s ease;
+    /* transition speed for text colour */
 }
 
 #strength_text.weak {
@@ -156,7 +172,8 @@ footer {
 }
 
 .tooltip .tooltip_text {
-    visibility: hidden; /* hide tooltip */
+    visibility: hidden;
+    /* hide tooltip */
     width: 200px;
     background-color: #333333;
     color: white;
@@ -167,20 +184,23 @@ footer {
     line-height: 1.5;
 
     position: absolute;
-    z-index: 1; /* place tool tip in front of other elements */
+    z-index: 1;
+    /* place tool tip in front of other elements */
     bottom: 125%;
     left: 75%;
 
     /* tooltip transitions*/
-    opacity: 0; 
+    opacity: 0;
     transform: translateX(-50%) translateY(10px);
     transition: opacity 0.5s, transform 0.5s;
 }
 
 .tooltip:hover .tooltip_text {
-    visibility: visible; /* show tooltip */
+    visibility: visible;
+    /* show tooltip */
     opacity: 1;
-    transform: translateX(-50%) translateY(0); /* slide tooltip up */
+    transform: translateX(-50%) translateY(0);
+    /* slide tooltip up */
 }
 
 #hover_instructions {
@@ -192,14 +212,17 @@ footer {
 }
 
 
-h2, h4 {
-    font-family: "Inter", sans-serif; /* backup font sans-serif */
+h2,
+h4 {
+    font-family: "Inter", sans-serif;
+    /* backup font sans-serif */
     font-weight: 500;
     margin-top: 5px;
 }
 
 p {
-    font-family: "Inter", sans-serif; /* backup font sans-serif */
+    font-family: "Inter", sans-serif;
+    /* backup font sans-serif */
     font-size: small;
 }
 
@@ -210,13 +233,14 @@ ul {
 }
 
 li {
-    font-family: "Inter", sans-serif; /* backup font sans-serif */
+    font-family: "Inter", sans-serif;
+    /* backup font sans-serif */
     font-size: smaller;
     text-align: left;
     margin-bottom: 8px;
 }
 
-li:hover{
+li:hover {
     cursor: help;
 }
 

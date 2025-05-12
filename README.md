@@ -2,6 +2,7 @@
 Check password strength in real-time with instant feedback and modern, clean user-interface!
 
 ## 📸 Screenshot
+![Password Strength Checker Screenshot](screenshot.png)
 
 ---
 
