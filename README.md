@@ -29,6 +29,7 @@ Check password strength in real-time with instant feedback and modern, clean use
 ---
 
 ## 🚀 Live Demo
+[View Live Website Here!](https://von-solano.github.io/password-strength-checker/)
 
 ---
 
@@ -43,5 +44,5 @@ Check password strength in real-time with instant feedback and modern, clean use
 - **Integrate API** to detect for leaked or breached passwords (e.g. HaveIBeenPwned).
 - **Improve strength scoring** system for edge cases.
 - **Dark mode toggle** for better accessibility.
-- **Copy-to-clipboard button**.
+- **Copy-to-clipboard button**
 - **Generate strong password suggestions**
